@@ -48,4 +48,7 @@ uppercase:
 
 lowecase:
 	bgt $s0, 113, next
+	sub $s0, $s0, 87
+	add $s1, $s1, $s0
+	j loop
 	
