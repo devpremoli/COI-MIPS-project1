@@ -40,7 +40,10 @@ number:
 
 
 uppercase:
-	bgt $s0, 81, next		# M = 17 so valid uppercases are A - Q and the ASCII for Q is 81
+	bgt $s0, 81, next
+	sub $s0, $s0, 55
+	add $s1, $s1, $s0
+	j loop		# M = 17 so valid uppercases are A - Q and the ASCII for Q is 81
 	
 
 lowecase:
