@@ -18,6 +18,6 @@ character:
 	lb $s0, ($t0)
 
 
-checker:
+loop:
 	beq $t1, 10, labela
 	
