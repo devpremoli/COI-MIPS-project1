@@ -11,4 +11,8 @@ main:
 	li $a0, input
 	li $a1, 11
 	syscall
-	
+
+	move $t0, $a0
+
+character:
+	lb $s0, ($t0)
