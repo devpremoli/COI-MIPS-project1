@@ -24,11 +24,17 @@ loop:
 
 checker:
 	bge $s0, 48, number
+	bge $s0, 65, uppercase
 
 next:
 	add $t0, $t0, 1
 	lb $s0, ($t0)
+	jump loop
 
 number:
-	bgt $s0, 57, next 
+	bgt $s0, 57, next
+
+
+uppercase:
+	bgt $s0, 81, next		# M = 17 so valid uppercases are A - Q and the ASCII for Q is 81
 	
