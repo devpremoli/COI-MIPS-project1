@@ -25,6 +25,7 @@ loop:
 checker:
 	bge $s0, 48, number
 	bge $s0, 65, uppercase
+	bge $s0, 97, lowecase
 
 next:
 	add $t0, $t0, 1
@@ -37,4 +38,8 @@ number:
 
 uppercase:
 	bgt $s0, 81, next		# M = 17 so valid uppercases are A - Q and the ASCII for Q is 81
+	
+
+lowecase:
+	bgt $s0, 113, next
 	
