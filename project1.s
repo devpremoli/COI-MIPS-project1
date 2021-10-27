@@ -20,4 +20,15 @@ character:
 
 loop:
 	beq $t1, 10, labela
+
+
+checker:
+	bge $s0, 48, number
+
+next:
+	add $t0, $t0, 1
+	lb $s0, ($t0)
+
+number:
+	bgt $s0, 57, next 
 	
