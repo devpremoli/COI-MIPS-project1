@@ -30,10 +30,13 @@ checker:
 next:
 	add $t0, $t0, 1
 	lb $s0, ($t0)
-	jump loop
+	j loop
 
 number:
 	bgt $s0, 57, next
+	sub $s0, $s0, 48
+	add $s1, $s1, $s0
+	j loop
 
 
 uppercase:
