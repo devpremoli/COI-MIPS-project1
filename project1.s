@@ -16,3 +16,8 @@ main:
 
 character:
 	lb $s0, ($t0)
+
+
+checker:
+	beq $t1, 10, labela
+	
