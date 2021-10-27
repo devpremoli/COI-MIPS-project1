@@ -36,19 +36,19 @@ number:
 	bgt $s0, 57, next
 	sub $s0, $s0, 48
 	add $s1, $s1, $s0
-	j loop
+	j next
 
 
 uppercase:
 	bgt $s0, 81, next
 	sub $s0, $s0, 55
 	add $s1, $s1, $s0
-	j loop		# M = 17 so valid uppercases are A - Q and the ASCII for Q is 81
+	j next		# M = 17 so valid uppercases are A - Q and the ASCII for Q is 81
 	
 
 lowecase:
 	bgt $s0, 113, next
 	sub $s0, $s0, 87
 	add $s1, $s1, $s0
-	j loop
+	j next
 	
