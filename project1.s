@@ -55,3 +55,6 @@ lowecase:
 	
 
 ouput:
+	li $v0, 1
+	move $a0, $s1
+	syscall
