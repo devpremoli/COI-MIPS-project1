@@ -19,10 +19,11 @@ character:
 
 
 loop:
-	beq $t1, 10, labela
+	beq $t1, 10, output
 
 
 checker:
+	addi $t1, $t1, 1
 	bge $s0, 48, number
 	bge $s0, 65, uppercase
 	bge $s0, 97, lowecase
@@ -52,3 +53,5 @@ lowecase:
 	add $s1, $s1, $s0
 	j next
 	
+
+ouput:
